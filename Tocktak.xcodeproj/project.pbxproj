@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0BDBE9EA148BA9066A22ECE6 /* Pods_Tocktak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */; };
+		810DBD7A27BC271200535F37 /* CameraCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DBD7827BC271200535F37 /* CameraCollectionViewCell.swift */; };
+		810DBD7B27BC271200535F37 /* CameraCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810DBD7927BC271200535F37 /* CameraCollectionViewCell.xib */; };
+		810DBD7F27BC2FA600535F37 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DBD7D27BC2FA600535F37 /* MainCollectionViewCell.swift */; };
+		810DBD8027BC2FA600535F37 /* MainCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810DBD7E27BC2FA600535F37 /* MainCollectionViewCell.xib */; };
+		810DBD8627BC312B00535F37 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 810DBD8427BC312B00535F37 /* ProfileCollectionViewCell.swift */; };
+		810DBD8727BC312B00535F37 /* ProfileCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 810DBD8527BC312B00535F37 /* ProfileCollectionViewCell.xib */; };
 		81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2027BB6D080045F502 /* AppDelegate.swift */; };
 		81839E2327BB6D080045F502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2227BB6D080045F502 /* SceneDelegate.swift */; };
 		81839E2527BB6D080045F502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2427BB6D080045F502 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		810DBD7827BC271200535F37 /* CameraCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCollectionViewCell.swift; sourceTree = "<group>"; };
+		810DBD7927BC271200535F37 /* CameraCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraCollectionViewCell.xib; sourceTree = "<group>"; };
+		810DBD7D27BC2FA600535F37 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		810DBD7E27BC2FA600535F37 /* MainCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCollectionViewCell.xib; sourceTree = "<group>"; };
+		810DBD8427BC312B00535F37 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
+		810DBD8527BC312B00535F37 /* ProfileCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileCollectionViewCell.xib; sourceTree = "<group>"; };
 		81839E1D27BB6D080045F502 /* Tocktak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tocktak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81839E2027BB6D080045F502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81839E2227BB6D080045F502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,8 +68,60 @@
 				D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */,
 				D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		810DBD6F27BBB82300535F37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				810DBD8127BC2FAC00535F37 /* MainCollectionView */,
+				810DBD7C27BC271A00535F37 /* CameraControllerView */,
+				81839E2627BB6D080045F502 /* Main.storyboard */,
+				810DBD8827BC312E00535F37 /* ProfileControllerView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		810DBD7027BBB82800535F37 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		810DBD7127BBB82D00535F37 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81839E2427BB6D080045F502 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		810DBD7C27BC271A00535F37 /* CameraControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				810DBD7827BC271200535F37 /* CameraCollectionViewCell.swift */,
+				810DBD7927BC271200535F37 /* CameraCollectionViewCell.xib */,
+			);
+			path = CameraControllerView;
+			sourceTree = "<group>";
+		};
+		810DBD8127BC2FAC00535F37 /* MainCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				810DBD7D27BC2FA600535F37 /* MainCollectionViewCell.swift */,
+				810DBD7E27BC2FA600535F37 /* MainCollectionViewCell.xib */,
+			);
+			path = MainCollectionView;
+			sourceTree = "<group>";
+		};
+		810DBD8827BC312E00535F37 /* ProfileControllerView */ = {
+			isa = PBXGroup;
+			children = (
+				810DBD8427BC312B00535F37 /* ProfileCollectionViewCell.swift */,
+				810DBD8527BC312B00535F37 /* ProfileCollectionViewCell.xib */,
+			);
+			path = ProfileControllerView;
 			sourceTree = "<group>";
 		};
 		81839E1427BB6D080045F502 = {
@@ -83,8 +147,9 @@
 			children = (
 				81839E2027BB6D080045F502 /* AppDelegate.swift */,
 				81839E2227BB6D080045F502 /* SceneDelegate.swift */,
-				81839E2427BB6D080045F502 /* ViewController.swift */,
-				81839E2627BB6D080045F502 /* Main.storyboard */,
+				810DBD7127BBB82D00535F37 /* Controllers */,
+				810DBD7027BBB82800535F37 /* Models */,
+				810DBD6F27BBB82300535F37 /* Views */,
 				81839E2927BB6D090045F502 /* Assets.xcassets */,
 				81839E2B27BB6D090045F502 /* LaunchScreen.storyboard */,
 				81839E2E27BB6D090045F502 /* Info.plist */,
@@ -152,7 +217,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81839E2D27BB6D090045F502 /* LaunchScreen.storyboard in Resources */,
+				810DBD7B27BC271200535F37 /* CameraCollectionViewCell.xib in Resources */,
+				810DBD8727BC312B00535F37 /* ProfileCollectionViewCell.xib in Resources */,
 				81839E2A27BB6D090045F502 /* Assets.xcassets in Resources */,
+				810DBD8027BC2FA600535F37 /* MainCollectionViewCell.xib in Resources */,
 				81839E2827BB6D080045F502 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -190,8 +258,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				81839E2527BB6D080045F502 /* ViewController.swift in Sources */,
+				810DBD7F27BC2FA600535F37 /* MainCollectionViewCell.swift in Sources */,
 				81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */,
 				81839E2327BB6D080045F502 /* SceneDelegate.swift in Sources */,
+				810DBD8627BC312B00535F37 /* ProfileCollectionViewCell.swift in Sources */,
+				810DBD7A27BC271200535F37 /* CameraCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
