@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BDBE9EA148BA9066A22ECE6 /* Pods_Tocktak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */; };
 		81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2027BB6D080045F502 /* AppDelegate.swift */; };
 		81839E2327BB6D080045F502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2227BB6D080045F502 /* SceneDelegate.swift */; };
 		81839E2527BB6D080045F502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2427BB6D080045F502 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		81839E2927BB6D090045F502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81839E2C27BB6D090045F502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81839E2E27BB6D090045F502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tocktak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tocktak.debug.xcconfig"; path = "Target Support Files/Pods-Tocktak/Pods-Tocktak.debug.xcconfig"; sourceTree = "<group>"; };
+		D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tocktak.release.xcconfig"; path = "Target Support Files/Pods-Tocktak/Pods-Tocktak.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BDBE9EA148BA9066A22ECE6 /* Pods_Tocktak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CF788664C79F73AA942EDFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		675C54F29A18FCE212BB32D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */,
+				D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		81839E1427BB6D080045F502 = {
 			isa = PBXGroup;
 			children = (
 				81839E1F27BB6D080045F502 /* Tocktak */,
 				81839E1E27BB6D080045F502 /* Products */,
+				675C54F29A18FCE212BB32D8 /* Pods */,
+				1CF788664C79F73AA942EDFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81839E3127BB6D090045F502 /* Build configuration list for PBXNativeTarget "Tocktak" */;
 			buildPhases = (
+				E776310F3CE88E60D179C764 /* [CP] Check Pods Manifest.lock */,
 				81839E1927BB6D080045F502 /* Sources */,
 				81839E1A27BB6D080045F502 /* Frameworks */,
 				81839E1B27BB6D080045F502 /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E776310F3CE88E60D179C764 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tocktak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		81839E1927BB6D080045F502 /* Sources */ = {
@@ -284,6 +335,7 @@
 		};
 		81839E3227BB6D090045F502 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +363,7 @@
 		};
 		81839E3327BB6D090045F502 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
