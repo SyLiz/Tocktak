@@ -8,15 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0BDBE9EA148BA9066A22ECE6 /* Pods_Tocktak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */; };
+		816E85F827BE1CB50097FA64 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E85F727BE1CB50097FA64 /* DiscoverViewController.swift */; };
+		816E85FB27BE38AE0097FA64 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816E85F927BE38AE0097FA64 /* MainViewCell.swift */; };
+		816E85FC27BE38AE0097FA64 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 816E85FA27BE38AE0097FA64 /* MainViewCell.xib */; };
 		81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2027BB6D080045F502 /* AppDelegate.swift */; };
 		81839E2327BB6D080045F502 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2227BB6D080045F502 /* SceneDelegate.swift */; };
 		81839E2527BB6D080045F502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81839E2427BB6D080045F502 /* ViewController.swift */; };
 		81839E2827BB6D080045F502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81839E2627BB6D080045F502 /* Main.storyboard */; };
 		81839E2A27BB6D090045F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81839E2927BB6D090045F502 /* Assets.xcassets */; };
 		81839E2D27BB6D090045F502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81839E2B27BB6D090045F502 /* LaunchScreen.storyboard */; };
+		81CEBDE127BF3FAE0069740E /* cat3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDC27BF3FAE0069740E /* cat3.mp4 */; };
+		81CEBDE227BF3FAE0069740E /* cat1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDD27BF3FAE0069740E /* cat1.mp4 */; };
+		81CEBDE327BF3FAE0069740E /* cat4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDE27BF3FAE0069740E /* cat4.mp4 */; };
+		81CEBDE427BF3FAE0069740E /* spider.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDF27BF3FAE0069740E /* spider.mp4 */; };
+		81CEBDE527BF3FAE0069740E /* cat2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDE027BF3FAE0069740E /* cat2.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		816E85F727BE1CB50097FA64 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		816E85F927BE38AE0097FA64 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		816E85FA27BE38AE0097FA64 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 		81839E1D27BB6D080045F502 /* Tocktak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tocktak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81839E2027BB6D080045F502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81839E2227BB6D080045F502 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,6 +36,11 @@
 		81839E2927BB6D090045F502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81839E2C27BB6D090045F502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81839E2E27BB6D090045F502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81CEBDDC27BF3FAE0069740E /* cat3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat3.mp4; sourceTree = "<group>"; };
+		81CEBDDD27BF3FAE0069740E /* cat1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat1.mp4; sourceTree = "<group>"; };
+		81CEBDDE27BF3FAE0069740E /* cat4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat4.mp4; sourceTree = "<group>"; };
+		81CEBDDF27BF3FAE0069740E /* spider.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = spider.mp4; sourceTree = "<group>"; };
+		81CEBDE027BF3FAE0069740E /* cat2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat2.mp4; sourceTree = "<group>"; };
 		9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tocktak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tocktak.debug.xcconfig"; path = "Target Support Files/Pods-Tocktak/Pods-Tocktak.debug.xcconfig"; sourceTree = "<group>"; };
 		D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tocktak.release.xcconfig"; path = "Target Support Files/Pods-Tocktak/Pods-Tocktak.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,13 +72,23 @@
 				D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */,
 				D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		816E85F627BE16A60097FA64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				816E85F727BE1CB50097FA64 /* DiscoverViewController.swift */,
+				816E85F927BE38AE0097FA64 /* MainViewCell.swift */,
+				816E85FA27BE38AE0097FA64 /* MainViewCell.xib */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		81839E1427BB6D080045F502 = {
 			isa = PBXGroup;
 			children = (
+				81CEBDDB27BF3F770069740E /* Assets */,
 				81839E1F27BB6D080045F502 /* Tocktak */,
 				81839E1E27BB6D080045F502 /* Products */,
 				675C54F29A18FCE212BB32D8 /* Pods */,
@@ -84,12 +110,25 @@
 				81839E2027BB6D080045F502 /* AppDelegate.swift */,
 				81839E2227BB6D080045F502 /* SceneDelegate.swift */,
 				81839E2427BB6D080045F502 /* ViewController.swift */,
+				816E85F627BE16A60097FA64 /* Controllers */,
 				81839E2627BB6D080045F502 /* Main.storyboard */,
 				81839E2927BB6D090045F502 /* Assets.xcassets */,
 				81839E2B27BB6D090045F502 /* LaunchScreen.storyboard */,
 				81839E2E27BB6D090045F502 /* Info.plist */,
 			);
 			path = Tocktak;
+			sourceTree = "<group>";
+		};
+		81CEBDDB27BF3F770069740E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				81CEBDDD27BF3FAE0069740E /* cat1.mp4 */,
+				81CEBDE027BF3FAE0069740E /* cat2.mp4 */,
+				81CEBDDC27BF3FAE0069740E /* cat3.mp4 */,
+				81CEBDDE27BF3FAE0069740E /* cat4.mp4 */,
+				81CEBDDF27BF3FAE0069740E /* spider.mp4 */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +190,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81CEBDE127BF3FAE0069740E /* cat3.mp4 in Resources */,
+				81CEBDE227BF3FAE0069740E /* cat1.mp4 in Resources */,
+				81CEBDE327BF3FAE0069740E /* cat4.mp4 in Resources */,
+				81CEBDE427BF3FAE0069740E /* spider.mp4 in Resources */,
+				81CEBDE527BF3FAE0069740E /* cat2.mp4 in Resources */,
+				816E85FC27BE38AE0097FA64 /* MainViewCell.xib in Resources */,
 				81839E2D27BB6D090045F502 /* LaunchScreen.storyboard in Resources */,
 				81839E2A27BB6D090045F502 /* Assets.xcassets in Resources */,
 				81839E2827BB6D080045F502 /* Main.storyboard in Resources */,
@@ -189,7 +234,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				816E85FB27BE38AE0097FA64 /* MainViewCell.swift in Sources */,
 				81839E2527BB6D080045F502 /* ViewController.swift in Sources */,
+				816E85F827BE1CB50097FA64 /* DiscoverViewController.swift in Sources */,
 				81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */,
 				81839E2327BB6D080045F502 /* SceneDelegate.swift in Sources */,
 			);
