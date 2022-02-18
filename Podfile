@@ -6,5 +6,6 @@ target 'Tocktak' do
   use_frameworks!
 
   # Pods for Tocktak
+  pod 'MarqueeLabel'
 
 end

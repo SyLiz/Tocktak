@@ -7,103 +7,186 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		054A3EB1015A256D60EB409EFB4DEBC1 /* Pods-Tocktak-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BC7E71FB016FEA8BDFB9ED6E049A930 /* Pods-Tocktak-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EF4D3E1F0BDF7F15CC6C4F642C6BBE12 /* Pods-Tocktak-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D450E912F52800747F4BE9B64B7DDC /* Pods-Tocktak-dummy.m */; };
-		F71F422FECDAE49CAAA7D20674FBEBB6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1812B79DDCDDBBCCB516B23DFD77A2DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		19EE53C9966D4142DD5B6BA2AD06D52B /* MarqueeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0FE1F280EBE6CD17CB11D260C4855F /* MarqueeLabel.swift */; };
+		2DF1F2842BF627B387F208A99772044C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */; };
+		2F9878203C57B16F8A2341363CE6ADE2 /* MarqueeLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FAFCB43B643869D69EAE42616A6E549 /* MarqueeLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CE0B8970AEE2F68ABC4434712981A8A /* MarqueeLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 844DF49C3CAE0CCE0323406E8F1B01F8 /* MarqueeLabel-dummy.m */; };
+		890D842A253CC9351D66015AB218F4DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */; };
+		E2E253D37D7A30F34FFBC8F441FF205C /* Pods-Tocktak-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91C933D3B4922241A7E2A37C99B73A38 /* Pods-Tocktak-dummy.m */; };
+		EF5E15C1E3D8CBC44A2821618F6A6333 /* Pods-Tocktak-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82F04494C7CE929500B32C50362803B9 /* Pods-Tocktak-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F70BE6EE52CFB5E92B68F8FBE2A7E1B8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4452CC53E68ECE73D9B222B021032C62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C23DB88E45B0ED14F0C8827BE9C46C95;
+			remoteInfo = MarqueeLabel;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0BC7E71FB016FEA8BDFB9ED6E049A930 /* Pods-Tocktak-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tocktak-umbrella.h"; sourceTree = "<group>"; };
-		37F0A9B2139860BB0409480129505FF4 /* Pods-Tocktak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tocktak.release.xcconfig"; sourceTree = "<group>"; };
-		6F90357D0DE2B4CACB894C776B69736B /* Pods-Tocktak-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tocktak-acknowledgements.plist"; sourceTree = "<group>"; };
-		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74835E7CF277AEA1755629043A8D0134 /* Pods-Tocktak-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tocktak-acknowledgements.markdown"; sourceTree = "<group>"; };
+		147D1E396BFD010C500D8F2D1A2CA557 /* MarqueeLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.release.xcconfig; sourceTree = "<group>"; };
+		210A907A52E43280638A145688A9C5B5 /* Pods-Tocktak.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tocktak.modulemap"; sourceTree = "<group>"; };
+		46E50A1A1E7598D671663C90E2F9FF00 /* MarqueeLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MarqueeLabel.debug.xcconfig; sourceTree = "<group>"; };
+		4A0FE1F280EBE6CD17CB11D260C4855F /* MarqueeLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarqueeLabel.swift; path = Sources/MarqueeLabel.swift; sourceTree = "<group>"; };
+		4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		506C1805F0EAF8D2FDE3D524C708E880 /* MarqueeLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MarqueeLabel.modulemap; sourceTree = "<group>"; };
+		5FAFCB43B643869D69EAE42616A6E549 /* MarqueeLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-umbrella.h"; sourceTree = "<group>"; };
+		6743A9108E6387B4B3EE65FC21B1E0F5 /* Pods-Tocktak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tocktak.debug.xcconfig"; sourceTree = "<group>"; };
+		7CA86ABF5C2C99DA436C2E71CEA0D366 /* MarqueeLabel-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MarqueeLabel-Info.plist"; sourceTree = "<group>"; };
+		82F04494C7CE929500B32C50362803B9 /* Pods-Tocktak-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Tocktak-umbrella.h"; sourceTree = "<group>"; };
 		842A5843FC89A4327426CB41604D1102 /* Pods-Tocktak */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Tocktak"; path = Pods_Tocktak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9198161C66C5A1E96CC1FA63A57D3B43 /* Pods-Tocktak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tocktak.debug.xcconfig"; sourceTree = "<group>"; };
-		98F76BE4343C6B9AC848ABACB3894315 /* Pods-Tocktak.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Tocktak.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C9D450E912F52800747F4BE9B64B7DDC /* Pods-Tocktak-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tocktak-dummy.m"; sourceTree = "<group>"; };
-		D828CC0E39CCA40B79C1F38FE80275CD /* Pods-Tocktak-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tocktak-Info.plist"; sourceTree = "<group>"; };
+		844DF49C3CAE0CCE0323406E8F1B01F8 /* MarqueeLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MarqueeLabel-dummy.m"; sourceTree = "<group>"; };
+		8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		91C933D3B4922241A7E2A37C99B73A38 /* Pods-Tocktak-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Tocktak-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		AF602E8FF6F3081934E17DCFE379B9E1 /* Pods-Tocktak-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tocktak-Info.plist"; sourceTree = "<group>"; };
+		B32882B4ABF2D2A0302FCEAC2234CB47 /* Pods-Tocktak-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Tocktak-frameworks.sh"; sourceTree = "<group>"; };
+		BA40BA30C163E0B18F3321CBBAF29D44 /* Pods-Tocktak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Tocktak.release.xcconfig"; sourceTree = "<group>"; };
+		CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarqueeLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D28151C7B9B53AC181A8CCA608A898BF /* MarqueeLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MarqueeLabel-prefix.pch"; sourceTree = "<group>"; };
+		D95F2697E3435EB1DC92AAC079AEF84A /* Pods-Tocktak-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Tocktak-acknowledgements.plist"; sourceTree = "<group>"; };
+		F4B34BFF6873A960B63A2C35701BBD7D /* Pods-Tocktak-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Tocktak-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E88F1F800A3507C7B7DEE637CB7DF237 /* Frameworks */ = {
+		9C8010534EC5891C1F4167E3F4595EC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F71F422FECDAE49CAAA7D20674FBEBB6 /* Foundation.framework in Frameworks */,
+				1812B79DDCDDBBCCB516B23DFD77A2DD /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE1746FCBBF82FC26CB045D88B1BCC1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				890D842A253CC9351D66015AB218F4DA /* Foundation.framework in Frameworks */,
+				2DF1F2842BF627B387F208A99772044C /* QuartzCore.framework in Frameworks */,
+				F70BE6EE52CFB5E92B68F8FBE2A7E1B8 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+				F0A778C0229E9BF1FD97896B93F3272B /* iOS */,
 			);
-			name = iOS;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04DE660F63D23FAA7E43A445293BBE41 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */,
+				842A5843FC89A4327426CB41604D1102 /* Pods-Tocktak */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58782B63556342DCE30CE4601D1F9BD4 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F70186FB7D4952795E9D930C6A2C4B1A /* Pods-Tocktak */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		ADDCF4F254169A4BAF86B07D092EDF72 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				506C1805F0EAF8D2FDE3D524C708E880 /* MarqueeLabel.modulemap */,
+				844DF49C3CAE0CCE0323406E8F1B01F8 /* MarqueeLabel-dummy.m */,
+				7CA86ABF5C2C99DA436C2E71CEA0D366 /* MarqueeLabel-Info.plist */,
+				D28151C7B9B53AC181A8CCA608A898BF /* MarqueeLabel-prefix.pch */,
+				5FAFCB43B643869D69EAE42616A6E549 /* MarqueeLabel-umbrella.h */,
+				46E50A1A1E7598D671663C90E2F9FF00 /* MarqueeLabel.debug.xcconfig */,
+				147D1E396BFD010C500D8F2D1A2CA557 /* MarqueeLabel.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/MarqueeLabel";
+			sourceTree = "<group>";
+		};
+		CA0B97F54F054ED4E45E343B6AA388B1 /* MarqueeLabel */ = {
+			isa = PBXGroup;
+			children = (
+				4A0FE1F280EBE6CD17CB11D260C4855F /* MarqueeLabel.swift */,
+				ADDCF4F254169A4BAF86B07D092EDF72 /* Support Files */,
+			);
+			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				DB5138434230B35A5B9C8AA0EA577F12 /* Products */,
-				FD62CBAD6AD877242CD02294AAC8FF85 /* Targets Support Files */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				F89CF82BFB6B29D57B3ED666A4980FA6 /* Pods */,
+				04DE660F63D23FAA7E43A445293BBE41 /* Products */,
+				58782B63556342DCE30CE4601D1F9BD4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+		F0A778C0229E9BF1FD97896B93F3272B /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				578452D2E740E91742655AC8F1636D1F /* iOS */,
+				4B1530FBFAA1690D27A135E4CC85AA07 /* Foundation.framework */,
+				9FE46B11FEBCBB7C689EB07A5E57BD38 /* QuartzCore.framework */,
+				8CE2AD31F00D0EF9C522211BDDBF6C3C /* UIKit.framework */,
 			);
-			name = Frameworks;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		D44D4ED6CAD8249D7BB252E9ABB05145 /* Pods-Tocktak */ = {
+		F70186FB7D4952795E9D930C6A2C4B1A /* Pods-Tocktak */ = {
 			isa = PBXGroup;
 			children = (
-				98F76BE4343C6B9AC848ABACB3894315 /* Pods-Tocktak.modulemap */,
-				74835E7CF277AEA1755629043A8D0134 /* Pods-Tocktak-acknowledgements.markdown */,
-				6F90357D0DE2B4CACB894C776B69736B /* Pods-Tocktak-acknowledgements.plist */,
-				C9D450E912F52800747F4BE9B64B7DDC /* Pods-Tocktak-dummy.m */,
-				D828CC0E39CCA40B79C1F38FE80275CD /* Pods-Tocktak-Info.plist */,
-				0BC7E71FB016FEA8BDFB9ED6E049A930 /* Pods-Tocktak-umbrella.h */,
-				9198161C66C5A1E96CC1FA63A57D3B43 /* Pods-Tocktak.debug.xcconfig */,
-				37F0A9B2139860BB0409480129505FF4 /* Pods-Tocktak.release.xcconfig */,
+				210A907A52E43280638A145688A9C5B5 /* Pods-Tocktak.modulemap */,
+				F4B34BFF6873A960B63A2C35701BBD7D /* Pods-Tocktak-acknowledgements.markdown */,
+				D95F2697E3435EB1DC92AAC079AEF84A /* Pods-Tocktak-acknowledgements.plist */,
+				91C933D3B4922241A7E2A37C99B73A38 /* Pods-Tocktak-dummy.m */,
+				B32882B4ABF2D2A0302FCEAC2234CB47 /* Pods-Tocktak-frameworks.sh */,
+				AF602E8FF6F3081934E17DCFE379B9E1 /* Pods-Tocktak-Info.plist */,
+				82F04494C7CE929500B32C50362803B9 /* Pods-Tocktak-umbrella.h */,
+				6743A9108E6387B4B3EE65FC21B1E0F5 /* Pods-Tocktak.debug.xcconfig */,
+				BA40BA30C163E0B18F3321CBBAF29D44 /* Pods-Tocktak.release.xcconfig */,
 			);
 			name = "Pods-Tocktak";
 			path = "Target Support Files/Pods-Tocktak";
 			sourceTree = "<group>";
 		};
-		DB5138434230B35A5B9C8AA0EA577F12 /* Products */ = {
+		F89CF82BFB6B29D57B3ED666A4980FA6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				842A5843FC89A4327426CB41604D1102 /* Pods-Tocktak */,
+				CA0B97F54F054ED4E45E343B6AA388B1 /* MarqueeLabel */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		FD62CBAD6AD877242CD02294AAC8FF85 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D44D4ED6CAD8249D7BB252E9ABB05145 /* Pods-Tocktak */,
-			);
-			name = "Targets Support Files";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		27DA8AA936AC1407293DD60F39DF3767 /* Headers */ = {
+		A2EB50AF16388B3CB019EF921CD306D9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				054A3EB1015A256D60EB409EFB4DEBC1 /* Pods-Tocktak-umbrella.h in Headers */,
+				EF5E15C1E3D8CBC44A2821618F6A6333 /* Pods-Tocktak-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAAAA2AF2FEEBF748BED3AC45024887C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F9878203C57B16F8A2341363CE6ADE2 /* MarqueeLabel-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,20 +195,39 @@
 /* Begin PBXNativeTarget section */
 		388AD62CE1136743EBDAA5D0564CAA50 /* Pods-Tocktak */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC75F90A8DDF80397EFB987E0A50D167 /* Build configuration list for PBXNativeTarget "Pods-Tocktak" */;
+			buildConfigurationList = 3A4A104C1ABFC582EF121B94F2D222F6 /* Build configuration list for PBXNativeTarget "Pods-Tocktak" */;
 			buildPhases = (
-				27DA8AA936AC1407293DD60F39DF3767 /* Headers */,
-				A69B6F48A802F7850B8554FAFDF00C1D /* Sources */,
-				E88F1F800A3507C7B7DEE637CB7DF237 /* Frameworks */,
-				769BEE933037BF5D6118F78FFDD9D68A /* Resources */,
+				A2EB50AF16388B3CB019EF921CD306D9 /* Headers */,
+				C80C123EFC4922C4AC895F523024745B /* Sources */,
+				9C8010534EC5891C1F4167E3F4595EC8 /* Frameworks */,
+				5218419FA9255ECDA4D7741C502A85A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63A673111790F2E0A020DC9F098E033D /* PBXTargetDependency */,
+			);
+			name = "Pods-Tocktak";
+			productName = Pods_Tocktak;
+			productReference = 842A5843FC89A4327426CB41604D1102 /* Pods-Tocktak */;
+			productType = "com.apple.product-type.framework";
+		};
+		C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 251180A9B6B807638C65029608571B8F /* Build configuration list for PBXNativeTarget "MarqueeLabel" */;
+			buildPhases = (
+				AAAAA2AF2FEEBF748BED3AC45024887C /* Headers */,
+				CE51103B19EB6AFC57B1C6125F7EB6C5 /* Sources */,
+				DE1746FCBBF82FC26CB045D88B1BCC1C /* Frameworks */,
+				1D85F9BE0FDD1AA06297EB5F21E58E97 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-Tocktak";
-			productName = Pods_Tocktak;
-			productReference = 842A5843FC89A4327426CB41604D1102 /* Pods-Tocktak */;
+			name = MarqueeLabel;
+			productName = MarqueeLabel;
+			productReference = CF0AA9FBFBDB70858C030769541505ED /* MarqueeLabel.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -135,7 +237,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -146,17 +248,25 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = DB5138434230B35A5B9C8AA0EA577F12 /* Products */;
+			productRefGroup = 04DE660F63D23FAA7E43A445293BBE41 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */,
 				388AD62CE1136743EBDAA5D0564CAA50 /* Pods-Tocktak */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		769BEE933037BF5D6118F78FFDD9D68A /* Resources */ = {
+		1D85F9BE0FDD1AA06297EB5F21E58E97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5218419FA9255ECDA4D7741C502A85A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,15 +276,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A69B6F48A802F7850B8554FAFDF00C1D /* Sources */ = {
+		C80C123EFC4922C4AC895F523024745B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF4D3E1F0BDF7F15CC6C4F642C6BBE12 /* Pods-Tocktak-dummy.m in Sources */,
+				E2E253D37D7A30F34FFBC8F441FF205C /* Pods-Tocktak-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE51103B19EB6AFC57B1C6125F7EB6C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19EE53C9966D4142DD5B6BA2AD06D52B /* MarqueeLabel.swift in Sources */,
+				6CE0B8970AEE2F68ABC4434712981A8A /* MarqueeLabel-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63A673111790F2E0A020DC9F098E033D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MarqueeLabel;
+			target = C23DB88E45B0ED14F0C8827BE9C46C95 /* MarqueeLabel */;
+			targetProxy = 4452CC53E68ECE73D9B222B021032C62 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
@@ -230,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -243,9 +371,81 @@
 			};
 			name = Debug;
 		};
-		754E0B6D248F411841E14BDFAEDBF054 /* Release */ = {
+		532D5A2BDD27A6B9CCAE2687F488E98D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37F0A9B2139860BB0409480129505FF4 /* Pods-Tocktak.release.xcconfig */;
+			baseConfigurationReference = 6743A9108E6387B4B3EE65FC21B1E0F5 /* Pods-Tocktak.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Tocktak/Pods-Tocktak-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Tocktak/Pods-Tocktak.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8B71D140048E37EA295DDF2313D659CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 147D1E396BFD010C500D8F2D1A2CA557 /* MarqueeLabel.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				PRODUCT_MODULE_NAME = MarqueeLabel;
+				PRODUCT_NAME = MarqueeLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A3F34BA03625CC2EE938118DC8398AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA40BA30C163E0B18F3321CBBAF29D44 /* Pods-Tocktak.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -281,12 +481,10 @@
 			};
 			name = Release;
 		};
-		A23DD74B05DF2FF15F8D805E45A04DFE /* Debug */ = {
+		A7500E7CF0B2C72ECABA50BE15BC536A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9198161C66C5A1E96CC1FA63A57D3B43 /* Pods-Tocktak.debug.xcconfig */;
+			baseConfigurationReference = 46E50A1A1E7598D671663C90E2F9FF00 /* MarqueeLabel.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -295,23 +493,22 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Tocktak/Pods-Tocktak-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/MarqueeLabel/MarqueeLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Tocktak/Pods-Tocktak.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/MarqueeLabel/MarqueeLabel.modulemap";
+				PRODUCT_MODULE_NAME = MarqueeLabel;
+				PRODUCT_NAME = MarqueeLabel;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -368,7 +565,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -383,20 +580,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		251180A9B6B807638C65029608571B8F /* Build configuration list for PBXNativeTarget "MarqueeLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A7500E7CF0B2C72ECABA50BE15BC536A /* Debug */,
+				8B71D140048E37EA295DDF2313D659CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A4A104C1ABFC582EF121B94F2D222F6 /* Build configuration list for PBXNativeTarget "Pods-Tocktak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				532D5A2BDD27A6B9CCAE2687F488E98D /* Debug */,
+				9A3F34BA03625CC2EE938118DC8398AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4214E6946993DF02ED98D89047C64016 /* Debug */,
 				CD85FD90473CFBE797E4264E7BBC70AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EC75F90A8DDF80397EFB987E0A50D167 /* Build configuration list for PBXNativeTarget "Pods-Tocktak" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A23DD74B05DF2FF15F8D805E45A04DFE /* Debug */,
-				754E0B6D248F411841E14BDFAEDBF054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

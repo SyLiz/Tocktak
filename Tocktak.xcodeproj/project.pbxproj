@@ -17,6 +17,7 @@
 		81839E2827BB6D080045F502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81839E2627BB6D080045F502 /* Main.storyboard */; };
 		81839E2A27BB6D090045F502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81839E2927BB6D090045F502 /* Assets.xcassets */; };
 		81839E2D27BB6D090045F502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81839E2B27BB6D090045F502 /* LaunchScreen.storyboard */; };
+		81ADC55127BFF8F300F6D089 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81ADC55027BFF8F300F6D089 /* PostModel.swift */; };
 		81CEBDE127BF3FAE0069740E /* cat3.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDC27BF3FAE0069740E /* cat3.mp4 */; };
 		81CEBDE227BF3FAE0069740E /* cat1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDD27BF3FAE0069740E /* cat1.mp4 */; };
 		81CEBDE327BF3FAE0069740E /* cat4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDE27BF3FAE0069740E /* cat4.mp4 */; };
@@ -36,6 +37,7 @@
 		81839E2927BB6D090045F502 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81839E2C27BB6D090045F502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81839E2E27BB6D090045F502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81ADC55027BFF8F300F6D089 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		81CEBDDC27BF3FAE0069740E /* cat3.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat3.mp4; sourceTree = "<group>"; };
 		81CEBDDD27BF3FAE0069740E /* cat1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat1.mp4; sourceTree = "<group>"; };
 		81CEBDDE27BF3FAE0069740E /* cat4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat4.mp4; sourceTree = "<group>"; };
@@ -79,8 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				816E85F727BE1CB50097FA64 /* DiscoverViewController.swift */,
-				816E85F927BE38AE0097FA64 /* MainViewCell.swift */,
-				816E85FA27BE38AE0097FA64 /* MainViewCell.xib */,
+				81ADC55327BFF9D100F6D089 /* MainViewCellController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -107,6 +108,7 @@
 		81839E1F27BB6D080045F502 /* Tocktak */ = {
 			isa = PBXGroup;
 			children = (
+				81ADC54F27BFF8B800F6D089 /* Models */,
 				81839E2027BB6D080045F502 /* AppDelegate.swift */,
 				81839E2227BB6D080045F502 /* SceneDelegate.swift */,
 				81839E2427BB6D080045F502 /* ViewController.swift */,
@@ -117,6 +119,23 @@
 				81839E2E27BB6D090045F502 /* Info.plist */,
 			);
 			path = Tocktak;
+			sourceTree = "<group>";
+		};
+		81ADC54F27BFF8B800F6D089 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81ADC55027BFF8F300F6D089 /* PostModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		81ADC55327BFF9D100F6D089 /* MainViewCellController */ = {
+			isa = PBXGroup;
+			children = (
+				816E85F927BE38AE0097FA64 /* MainViewCell.swift */,
+				816E85FA27BE38AE0097FA64 /* MainViewCell.xib */,
+			);
+			path = MainViewCellController;
 			sourceTree = "<group>";
 		};
 		81CEBDDB27BF3F770069740E /* Assets */ = {
@@ -142,6 +161,7 @@
 				81839E1927BB6D080045F502 /* Sources */,
 				81839E1A27BB6D080045F502 /* Frameworks */,
 				81839E1B27BB6D080045F502 /* Resources */,
+				555DDE6BC6D24A48D79BF56A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -205,6 +225,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		555DDE6BC6D24A48D79BF56A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tocktak/Pods-Tocktak-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tocktak/Pods-Tocktak-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tocktak/Pods-Tocktak-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E776310F3CE88E60D179C764 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				816E85FB27BE38AE0097FA64 /* MainViewCell.swift in Sources */,
+				81ADC55127BFF8F300F6D089 /* PostModel.swift in Sources */,
 				81839E2527BB6D080045F502 /* ViewController.swift in Sources */,
 				816E85F827BE1CB50097FA64 /* DiscoverViewController.swift in Sources */,
 				81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */,

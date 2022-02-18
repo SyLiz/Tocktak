@@ -57,8 +57,8 @@ class ViewController: UIViewController {
 
 
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
-        view.addGestureRecognizer(tap)
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
+//        mainCollectionView.addGestureRecognizer(tap)
         //UIApplication.shared.statusBarStyle = .darkContent
     }
     
@@ -158,36 +158,40 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    @objc func tap(sender: UITapGestureRecognizer){
-        if let indexPath = self.mainCollectionView?.indexPathForItem(at: sender.location(in: self.mainCollectionView)) {
-            let cell = self.mainCollectionView?.cellForItem(at: indexPath) as! MainViewCell
-            print("collection view at indexPath : \(indexPath) was tapped")
-            cell.controller()
-        } else {
-            print("Not collection view was tapped")
-        }
-    }
+//    @objc func tap(sender: UITapGestureRecognizer){
+//        if let indexPath = self.mainCollectionView?.indexPathForItem(at: sender.location(in: self.mainCollectionView)) {
+//            let cell = self.mainCollectionView?.cellForItem(at: indexPath) as! MainViewCell
+//            print("collection view at indexPath : \(indexPath) was tapped")
+//            cell.changeState()
+//        } else {
+//            print("Not collection view was tapped")
+//        }
+//    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return tempViewModels.capacity
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+
 
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? MainViewCell else {
                 return UICollectionViewCell()
         }
-        
-        if (currentPlayingIndex == indexPath.row) {
-            cell.play()
-        }
+        cell.postModel = tempViewModels[indexPath.row]
+
+
         cell.layoutIfNeeded()
         cell.layoutSubviews()
-        cell.playVideo(from: "cat\(indexPath.row+1).mp4")
+
+        cell.songNameLabel.restartLabel()
+        cell.playVideo()
         if (!firstIsPlayed) {
             firstIsPlayed = true
             cell.play()
         }
+        
         return cell
     }
     
@@ -205,23 +209,36 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         guard let indexPath = mainCollectionView.indexPathForItem(at: visiblePoint) else { return }        
 
         mainCollectionView.cellForItem(at: indexPath)
-        mainCollectionView.visibleCells.forEach { cell in
-            let cell = cell as! MainViewCell
-            if (currentPlayingIndex == indexPath.row) {
-                cell.play(rePlay: false)
-            } else {
-                cell.play()
+        
+        let oldIndex = currentPlayingIndex
+        if (oldIndex != indexPath.row) {
+            if let playCell =  mainCollectionView.cellForItem(at: [0,currentPlayingIndex] ) as? MainViewCell {
+                playCell.pause()
+                playCell.songNameLabel.pauseLabel()
             }
         }
-        
-        if (indexPath.row != currentPlayingIndex) {
-            if  let cell = mainCollectionView.cellForItem(at: [0,currentPlayingIndex]) as? MainViewCell{
-                 cell.player?.pause()
-            }
-        }
-        
         currentPlayingIndex = indexPath.row
-        
+
+        if let playCell =  mainCollectionView.cellForItem(at: [0,currentPlayingIndex] ) as? MainViewCell {
+            if (currentPlayingIndex != oldIndex) {
+                playCell.showPlayBottonView.isHidden = true
+                playCell.play(rePlay: true)
+                playCell.songNameLabel.restartLabel()
+                playCell.songNameLabel.unpauseLabel()
+
+            }
+            
+            mainCollectionView.visibleCells.forEach { cell in
+                let cell = cell as! MainViewCell
+                if (cell.postModel?.vdoURL !=   playCell.postModel?.vdoURL) {
+                    cell.pause()
+                    cell.songNameLabel.pauseLabel()
+                    cell.showPlayBottonView.isHidden = true
+                }
+                
+            }
+        }
+
     }
 }
 
@@ -229,7 +246,6 @@ extension UISegmentedControl {
 
     func setiOS12Layout(tintColor: UIColor) {
         if #available(iOS 13, *) {
-
             let background = UIImage(color: .clear, size: CGSize(width: 1, height: 32))
              let divider = UIImage(color: tintColor, size: CGSize(width: 1, height: 32))
              self.setBackgroundImage(background, for: .normal, barMetrics: .default)
@@ -241,7 +257,6 @@ extension UISegmentedControl {
             self.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .regular)], for: .selected)
 
         } else {
-
             self.tintColor = tintColor
         }
     }
@@ -249,7 +264,6 @@ extension UISegmentedControl {
 extension UIImage {
 
     convenience init(color: UIColor, size: CGSize) {
-
         UIGraphicsBeginImageContextWithOptions(size, false, 1)
         color.set()
         let context = UIGraphicsGetCurrentContext()!

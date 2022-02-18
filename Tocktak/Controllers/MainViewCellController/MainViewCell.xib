@@ -18,7 +18,27 @@
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehd-66-d5k">
                         <rect key="frame" x="0.0" y="0.0" width="344" height="605"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.0" green="0.043137254899999998" blue="0.28627450980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJU-x8-NEk">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="605"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rLl-nB-voG">
+                                <rect key="frame" x="119.5" y="245.5" width="105.5" height="115.5"/>
+                                <imageReference key="image" image="play.fill" catalog="system" renderingMode="hierarchical-single">
+                                    <hierarchicalColors>
+                                        <color white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color systemColor="secondaryLabelColor"/>
+                                        <color systemColor="tertiaryLabelColor"/>
+                                    </hierarchicalColors>
+                                </imageReference>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="120"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="rLl-nB-voG" firstAttribute="centerY" secondItem="qJU-x8-NEk" secondAttribute="centerY" id="6mm-hi-oWp"/>
+                            <constraint firstItem="rLl-nB-voG" firstAttribute="centerX" secondItem="qJU-x8-NEk" secondAttribute="centerX" id="mqf-li-zeP"/>
+                        </constraints>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1tL-Uq-bia">
                         <rect key="frame" x="265.5" y="243.5" width="78.5" height="353.5"/>
@@ -105,32 +125,85 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p76-wb-9Ul">
+                        <rect key="frame" x="32" y="576.5" width="172" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label Label Label - Label Label Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQo-Ap-yT2" customClass="MarqueeLabel" customModule="MarqueeLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="172" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="forceScrolling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WQo-Ap-yT2" secondAttribute="bottom" id="9iq-Pa-EYK"/>
+                            <constraint firstItem="WQo-Ap-yT2" firstAttribute="leading" secondItem="p76-wb-9Ul" secondAttribute="leading" id="ZTi-HO-fuA"/>
+                            <constraint firstItem="WQo-Ap-yT2" firstAttribute="top" secondItem="p76-wb-9Ul" secondAttribute="top" id="ccC-BK-NBm"/>
+                            <constraint firstAttribute="trailing" secondItem="WQo-Ap-yT2" secondAttribute="trailing" id="m5R-Zo-51T"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="♫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duh-UY-wsD">
+                        <rect key="frame" x="8" y="576.5" width="16" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="ehd-66-d5k" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="AZg-fJ-d0C"/>
-                <constraint firstAttribute="bottom" secondItem="ehd-66-d5k" secondAttribute="bottom" id="DkY-TS-MSx"/>
-                <constraint firstAttribute="trailing" secondItem="1tL-Uq-bia" secondAttribute="trailing" id="DtI-We-sq8"/>
-                <constraint firstAttribute="bottom" secondItem="1tL-Uq-bia" secondAttribute="bottom" constant="8" id="a6w-z5-H9W"/>
-                <constraint firstAttribute="trailing" secondItem="ehd-66-d5k" secondAttribute="trailing" id="g19-dp-A2i"/>
-                <constraint firstItem="ehd-66-d5k" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vdS-1I-Oce"/>
+                <constraint firstAttribute="trailing" secondItem="qJU-x8-NEk" secondAttribute="trailing" id="1DB-TQ-B11"/>
+                <constraint firstAttribute="trailing" secondItem="1tL-Uq-bia" secondAttribute="trailing" id="2c0-DA-VZS"/>
+                <constraint firstItem="ehd-66-d5k" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3kW-fZ-Xu3"/>
+                <constraint firstAttribute="trailing" secondItem="ehd-66-d5k" secondAttribute="trailing" id="Ftd-2j-yK1"/>
+                <constraint firstItem="qJU-x8-NEk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LVO-mn-niG"/>
+                <constraint firstItem="duh-UY-wsD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="MwA-4P-o8z"/>
+                <constraint firstAttribute="bottom" secondItem="qJU-x8-NEk" secondAttribute="bottom" id="OzS-xk-JcA"/>
+                <constraint firstItem="p76-wb-9Ul" firstAttribute="leading" secondItem="duh-UY-wsD" secondAttribute="trailing" constant="8" id="Se8-pq-k4z"/>
+                <constraint firstAttribute="bottom" secondItem="1tL-Uq-bia" secondAttribute="bottom" constant="8" id="YWx-Iz-Qse"/>
+                <constraint firstAttribute="bottom" secondItem="duh-UY-wsD" secondAttribute="bottom" constant="8" id="eRx-hP-T0U"/>
+                <constraint firstItem="qJU-x8-NEk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eg2-8O-Who"/>
+                <constraint firstAttribute="bottom" secondItem="p76-wb-9Ul" secondAttribute="bottom" constant="8" id="lMK-Dh-EcP"/>
+                <constraint firstItem="ehd-66-d5k" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ngW-lc-GQK"/>
+                <constraint firstItem="p76-wb-9Ul" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.5" id="pyh-yD-FN6"/>
+                <constraint firstAttribute="bottom" secondItem="ehd-66-d5k" secondAttribute="bottom" id="wLx-0K-hCR"/>
             </constraints>
             <size key="customSize" width="344" height="605"/>
             <connections>
                 <outlet property="heartButton" destination="sip-Nx-eLZ" id="pVh-0c-Xy4"/>
+                <outlet property="playIcon" destination="rLl-nB-voG" id="MN0-dL-OSD"/>
                 <outlet property="playerView" destination="ehd-66-d5k" id="zWI-dF-z3z"/>
                 <outlet property="rightStackView" destination="1tL-Uq-bia" id="QgF-Uc-79O"/>
+                <outlet property="showPlayBottonView" destination="qJU-x8-NEk" id="eqU-F6-5SU"/>
+                <outlet property="songNameLabel" destination="WQo-Ap-yT2" id="R02-CP-5eM"/>
             </connections>
             <point key="canvasLocation" x="33.333333333333336" y="168.41517857142856"/>
         </collectionViewCell>
     </objects>
+    <designables>
+        <designable name="WQo-Ap-yT2">
+            <size key="intrinsicContentSize" width="282" height="20.5"/>
+        </designable>
+    </designables>
     <resources>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="ellipsis.bubble.fill" catalog="system" width="128" height="110"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
