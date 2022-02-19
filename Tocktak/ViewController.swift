@@ -7,8 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController, NavigateCallHandler {
     var firstIsPlayed = false
     var currentPlayingIndex:Int = 0
     let segmentedControl = UISegmentedControl(items: ["Following", "For You"])
@@ -29,10 +28,8 @@ class ViewController: UIViewController {
         mainCollectionView.dataSource = self
         mainCollectionView?.contentInsetAdjustmentBehavior = .never
         
-
-
         customView.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        customView.backgroundColor = UIColor.brown     //give color to the view
+        customView.backgroundColor = UIColor.brown
         customView.center = self.view.center
         self.view.addSubview(customView)
         customView.isHidden = true
@@ -48,23 +45,29 @@ class ViewController: UIViewController {
 
         let heightConstraint = NSLayoutConstraint(item: myLabel, attribute: .height, relatedBy: .equal,
                                                   toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 100)
-
         let xConstraint = NSLayoutConstraint(item: myLabel, attribute: .centerX, relatedBy: .equal, toItem: customView, attribute: .centerX, multiplier: 1, constant: 0)
 
         let yConstraint = NSLayoutConstraint(item: myLabel, attribute: .centerY, relatedBy: .equal, toItem: customView, attribute: .centerY, multiplier: 1, constant: 0)
 
         NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
 
-
-
 //        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
 //        mainCollectionView.addGestureRecognizer(tap)
         //UIApplication.shared.statusBarStyle = .darkContent
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setNeedsStatusBarAppearanceUpdate()
+    func callNavigater(withIdentifier: String , model: Any?) {
+        performSegue(withIdentifier: withIdentifier, sender: model)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == AppConstants.kMainToProfileIdentifier {
+            let vc = segue.destination
+              if  let safeModel = sender as? PostModel {
+                  vc.title =  safeModel.userName
+            }
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -117,6 +120,7 @@ class ViewController: UIViewController {
             }
         }
     
+    // App life cycle
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         let appearance = UITabBarAppearance()
@@ -128,15 +132,19 @@ class ViewController: UIViewController {
         self.tabBarController!.tabBar.tintColor = .black
         self.tabBarController!.tabBar.backgroundColor = .white
         
-        //Hide or Remove navigationBar items
-        self.navigationController?.navigationBar.topItem?.titleView = UIView()
-        self.navigationController!.navigationBar.topItem?.rightBarButtonItem = nil
-        self.navigationController!.navigationBar.topItem?.leftBarButtonItem = nil
+
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setNeedsStatusBarAppearanceUpdate()
+        
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .black
@@ -151,6 +159,11 @@ class ViewController: UIViewController {
         self.navigationController!.navigationBar.topItem?.rightBarButtonItem = search
         self.navigationController!.navigationBar.topItem?.leftBarButtonItem = camera
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//
+//    }
 }
 
 
@@ -181,7 +194,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         }
         cell.postModel = tempViewModels[indexPath.row]
 
-
+        cell.delegate = self
         cell.layoutIfNeeded()
         cell.layoutSubviews()
 
@@ -241,6 +254,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
 
     }
 }
+
 
 extension UISegmentedControl {
 

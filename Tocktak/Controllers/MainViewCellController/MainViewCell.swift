@@ -10,6 +10,10 @@ import AVKit
 import AVFoundation
 import MarqueeLabel
 
+protocol NavigateCallHandler {
+    func callNavigater(withIdentifier:String, model:Any?)
+}
+
 class MainViewCell: UICollectionViewCell {
     @IBOutlet weak var profileImg: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
@@ -25,6 +29,7 @@ class MainViewCell: UICollectionViewCell {
     var player : AVPlayer?
     var playerViewController = AVPlayerViewController()
     var postModel : PostModel?
+    var delegate:NavigateCallHandler?
     
     @IBOutlet weak var heartButton: UIButton!
     
@@ -35,7 +40,6 @@ class MainViewCell: UICollectionViewCell {
         let tempImage = playIcon.image!.withShadow(blur: 2, offset: CGSize.init(width: 0, height: 0), color: .black)
         playIcon.image =  tempImage.resize(targetSize: CGSize(width: 50, height: 50))
         
-        profileImg.backgroundColor = .clear
         profileImg.layer.cornerRadius = 24
         profileImg.layer.borderWidth = 1
         profileImg.layer.borderColor = UIColor.white.cgColor
@@ -71,6 +75,12 @@ class MainViewCell: UICollectionViewCell {
               let songLabelTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(songLabelTap))
               songView.addGestureRecognizer(songLabelTap)
               
+              let profileImgTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileImgTap))
+              profileImg.addGestureRecognizer(profileImgTap)
+              
+              let profileLabelTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(profileLabelTap))
+              userNameLabel.addGestureRecognizer(profileLabelTap)
+              
               userNameLabel.text = "@\(safeData.userName)"
               detailLabel.text = safeData.description
               songNameLabel.text = "\(safeData.songName)    "
@@ -78,6 +88,7 @@ class MainViewCell: UICollectionViewCell {
               commentCountLabel.text = "\(safeData.commentCount)"
               profileImg.image =  UIImage(named: "\(safeData.imgStr)")?.resize(targetSize: CGSize(width: 50, height: 50))
 
+              
         }
      }
     
@@ -85,6 +96,15 @@ class MainViewCell: UICollectionViewCell {
         print("Song label was taped")
     }
     
+    @objc func profileImgTap(sender: UITapGestureRecognizer) {
+        print("profileImg was taped")
+        delegate?.callNavigater(withIdentifier: AppConstants.kMainToProfileIdentifier, model: postModel)
+    }
+    
+    @objc func profileLabelTap(sender: UITapGestureRecognizer) {
+        print("profileLabel was taped")
+        delegate?.callNavigater(withIdentifier: AppConstants.kMainToProfileIdentifier, model: postModel)
+    }
     
     @objc func playerViewTap(sender: UITapGestureRecognizer) {
         self.showPlayBottonView.isHidden = false
@@ -107,7 +127,6 @@ class MainViewCell: UICollectionViewCell {
         changeState()
         
     }
-    
     
     @objc func restartVideo() {
         player?.pause()

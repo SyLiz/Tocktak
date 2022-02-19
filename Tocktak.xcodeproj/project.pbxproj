@@ -23,6 +23,8 @@
 		81CEBDE327BF3FAE0069740E /* cat4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDE27BF3FAE0069740E /* cat4.mp4 */; };
 		81CEBDE427BF3FAE0069740E /* spider.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDDF27BF3FAE0069740E /* spider.mp4 */; };
 		81CEBDE527BF3FAE0069740E /* cat2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 81CEBDE027BF3FAE0069740E /* cat2.mp4 */; };
+		81DD4E3427C141B20030E54C /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD4E3327C141B20030E54C /* AppConstants.swift */; };
+		81DD4E3627C14A3D0030E54C /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DD4E3527C14A3D0030E54C /* MyTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		81CEBDDE27BF3FAE0069740E /* cat4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat4.mp4; sourceTree = "<group>"; };
 		81CEBDDF27BF3FAE0069740E /* spider.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = spider.mp4; sourceTree = "<group>"; };
 		81CEBDE027BF3FAE0069740E /* cat2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat2.mp4; sourceTree = "<group>"; };
+		81DD4E3327C141B20030E54C /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		81DD4E3527C14A3D0030E54C /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		9379092099D3F2713913E7D9 /* Pods_Tocktak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tocktak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D4C2DF9F88EF4674F0FC90 /* Pods-Tocktak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tocktak.debug.xcconfig"; path = "Target Support Files/Pods-Tocktak/Pods-Tocktak.debug.xcconfig"; sourceTree = "<group>"; };
 		D8EEEFD1D3B05CBAACFC5F13 /* Pods-Tocktak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tocktak.release.xcconfig"; path = "Target Support Files/Pods-Tocktak/Pods-Tocktak.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +84,7 @@
 		816E85F627BE16A60097FA64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				81DD4E3527C14A3D0030E54C /* MyTabBarController.swift */,
 				816E85F727BE1CB50097FA64 /* DiscoverViewController.swift */,
 				81ADC55327BFF9D100F6D089 /* MainViewCellController */,
 			);
@@ -125,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				81ADC55027BFF8F300F6D089 /* PostModel.swift */,
+				81DD4E3327C141B20030E54C /* AppConstants.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -272,9 +278,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				816E85FB27BE38AE0097FA64 /* MainViewCell.swift in Sources */,
+				81DD4E3627C14A3D0030E54C /* MyTabBarController.swift in Sources */,
 				81ADC55127BFF8F300F6D089 /* PostModel.swift in Sources */,
 				81839E2527BB6D080045F502 /* ViewController.swift in Sources */,
 				816E85F827BE1CB50097FA64 /* DiscoverViewController.swift in Sources */,
+				81DD4E3427C141B20030E54C /* AppConstants.swift in Sources */,
 				81839E2127BB6D080045F502 /* AppDelegate.swift in Sources */,
 				81839E2327BB6D080045F502 /* SceneDelegate.swift in Sources */,
 			);
