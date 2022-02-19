@@ -19,7 +19,7 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ypw-Ca-t9A">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="JKI-wL-H5i">
                                     <size key="itemSize" width="270" height="399"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -105,7 +105,7 @@
             </objects>
             <point key="canvasLocation" x="1832" y="-596"/>
         </scene>
-        <!--Item-->
+        <!--Profile-->
         <scene sceneID="ye3-Gv-4k8">
             <objects>
                 <viewController id="goh-4j-k2M" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                         <viewLayoutGuide key="safeArea" id="YZ5-45-jzO"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" id="pHV-91-v9s"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" id="pHV-91-v9s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZL-oY-PFY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
