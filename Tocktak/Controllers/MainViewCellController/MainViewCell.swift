@@ -40,11 +40,9 @@ class MainViewCell: UICollectionViewCell {
         let tempImage = playIcon.image!.withShadow(blur: 2, offset: CGSize.init(width: 0, height: 0), color: .black)
         playIcon.image =  tempImage.resize(targetSize: CGSize(width: 50, height: 50))
         
-        profileImg.layer.cornerRadius = 24
         profileImg.layer.borderWidth = 1
         profileImg.layer.borderColor = UIColor.white.cgColor
-        profileImg?.layer.cornerRadius = (profileImg.bounds.height) / 4
-
+        profileImg?.layer.cornerRadius = (profileImg.bounds.height) / 2
     }
     
      func buildCell() {
