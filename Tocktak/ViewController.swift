@@ -8,10 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController, NavigateCallHandler {
-    var firstIsPlayed = false
     var currentPlayingIndex:Int = 0
     let segmentedControl = UISegmentedControl(items: ["Following", "For You"])
-    
     let customView = UIView()
     var search = UIBarButtonItem()
     var camera = UIBarButtonItem()
@@ -132,8 +130,8 @@ class ViewController: UIViewController, NavigateCallHandler {
         self.tabBarController!.tabBar.tintColor = .black
         self.tabBarController!.tabBar.backgroundColor = .white
         
-
-
+        changeState(isPause: true)
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -155,15 +153,47 @@ class ViewController: UIViewController, NavigateCallHandler {
         self.tabBarController!.tabBar.backgroundColor = .white
         
         //Re build navigationBar items
+//        self.navigationController?.navigationBar.topItem?.titleView = segmentedControl
+//        self.navigationController!.navigationBar.topItem?.rightBarButtonItem = search
+//        self.navigationController!.navigationBar.topItem?.leftBarButtonItem = camera
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //Re build navigationBar items
         self.navigationController?.navigationBar.topItem?.titleView = segmentedControl
         self.navigationController!.navigationBar.topItem?.rightBarButtonItem = search
         self.navigationController!.navigationBar.topItem?.leftBarButtonItem = camera
+        
+        changeState(isPause: false)
+
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//    }
+    
+    func changeState(isPause:Bool) {
+        var visibleRect = CGRect()
+        visibleRect.origin = mainCollectionView.contentOffset
+        visibleRect.size = mainCollectionView.bounds.size
+
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+
+        guard let indexPath = mainCollectionView.indexPathForItem(at: visiblePoint) else { return }
+
+        guard let currentCell = mainCollectionView.cellForItem(at: indexPath) as? MainViewCell else { return }
+        
+        if (isPause) {
+            currentCell.player?.pause()
+            currentCell.songNameLabel.pauseLabel()
+        }
+        else {
+            if (currentCell.showPlayBottonView.isHidden) {
+                currentCell.player?.play()
+                currentCell.songNameLabel.unpauseLabel()
+
+            }
+        }
+    }
 }
 
 
@@ -186,25 +216,15 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-
-
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? MainViewCell else {
                 return UICollectionViewCell()
         }
         cell.postModel = tempViewModels[indexPath.row]
-
         cell.delegate = self
         cell.layoutIfNeeded()
         cell.layoutSubviews()
-
         cell.songNameLabel.restartLabel()
         cell.buildCell()
-        if (!firstIsPlayed) {
-            firstIsPlayed = true
-            cell.play()
-        }
-        
         return cell
     }
     
@@ -221,7 +241,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
 
         guard let indexPath = mainCollectionView.indexPathForItem(at: visiblePoint) else { return }        
 
-        mainCollectionView.cellForItem(at: indexPath)
+        //mainCollectionView.cellForItem(at: indexPath)
         
         let oldIndex = currentPlayingIndex
         if (oldIndex != indexPath.row) {
