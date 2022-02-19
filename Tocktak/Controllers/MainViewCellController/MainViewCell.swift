@@ -41,7 +41,6 @@ class MainViewCell: UICollectionViewCell {
         profileImg.layer.borderColor = UIColor.white.cgColor
         profileImg?.layer.cornerRadius = (profileImg.bounds.height) / 4
 
-
     }
     
      func buildCell() {
@@ -77,18 +76,7 @@ class MainViewCell: UICollectionViewCell {
               songNameLabel.text = "\(safeData.songName)    "
               likeCountLabel.text = "\(safeData.likeCount)"
               commentCountLabel.text = "\(safeData.commentCount)"
-
               profileImg.image =  UIImage(named: "\(safeData.imgStr)")?.resize(targetSize: CGSize(width: 50, height: 50))
-
-              
-//              profileButton.setImage( UIImage(named: "\(safeData.imgStr)")?.resizeImage(targetSize: CGSize(width: 50, height: 50)), for: .normal)
-//
-//              profileButton.backgroundColor = .clear
-//              profileButton.layer.cornerRadius = 24
-//              profileButton.layer.borderWidth = 2
-//              profileButton.layer.borderColor = UIColor.white.cgColor
-//              profileButton.imageView?.layer.cornerRadius = profileButton.bounds.height / 2.0
-             
 
         }
      }
@@ -99,10 +87,11 @@ class MainViewCell: UICollectionViewCell {
     
     
     @objc func playerViewTap(sender: UITapGestureRecognizer) {
+        self.showPlayBottonView.isHidden = false
+        showPlayBottonView.layoutSubviews()
         print("\(String(describing: postModel?.vdoURL)) : Video is Pause")
         changeState()
-        self.showPlayBottonView.isHidden = false
-
+        self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 2, y: 2)
         UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseInOut, animations: {
             //self.playIcon.center = newCenter
             self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1) // Scale your image
@@ -115,7 +104,6 @@ class MainViewCell: UICollectionViewCell {
     @objc func playBottonViewTap(sender: UITapGestureRecognizer) {
         print("\(String(describing: postModel?.vdoURL)) : Video is Playing")
         showPlayBottonView.isHidden = true
-        self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 2, y: 2)
         changeState()
         
     }
@@ -160,8 +148,6 @@ class MainViewCell: UICollectionViewCell {
 }
 
 extension UIImage {
-    /// Returns a new image with the specified shadow properties.
-    /// This will increase the size of the image to fit the shadow and the original image.
     func withShadow(blur: CGFloat = 6, offset: CGSize = .zero, color: UIColor = UIColor(white: 0, alpha: 0.8)) -> UIImage {
 
         let shadowRect = CGRect(
