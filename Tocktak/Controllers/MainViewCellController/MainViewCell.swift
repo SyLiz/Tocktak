@@ -11,11 +11,17 @@ import AVFoundation
 import MarqueeLabel
 
 class MainViewCell: UICollectionViewCell {
+    @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var songView: UIView!
     @IBOutlet weak var playIcon: UIImageView!
     @IBOutlet weak var showPlayBottonView: UIView!
     @IBOutlet weak var songNameLabel: MarqueeLabel!
     @IBOutlet weak var rightStackView: UIStackView!
     @IBOutlet weak var playerView: UIView!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
     var player : AVPlayer?
     var playerViewController = AVPlayerViewController()
     var postModel : PostModel?
@@ -27,10 +33,18 @@ class MainViewCell: UICollectionViewCell {
         rightStackView.backgroundColor = .clear
         
         let tempImage = playIcon.image!.withShadow(blur: 2, offset: CGSize.init(width: 0, height: 0), color: .black)
-        playIcon.image =  tempImage.resizeImage(targetSize: CGSize(width: 100, height: 100))
+        playIcon.image =  tempImage.resize(targetSize: CGSize(width: 50, height: 50))
+        
+        profileImg.backgroundColor = .clear
+        profileImg.layer.cornerRadius = 24
+        profileImg.layer.borderWidth = 1
+        profileImg.layer.borderColor = UIColor.white.cgColor
+        profileImg?.layer.cornerRadius = (profileImg.bounds.height) / 4
+
+
     }
     
-     func playVideo() {
+     func buildCell() {
           if let safeData = postModel {
               let file = safeData.vdoURL.components(separatedBy: ".")
 
@@ -55,28 +69,53 @@ class MainViewCell: UICollectionViewCell {
               let playBottonViewTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(playBottonViewTap))
               showPlayBottonView.addGestureRecognizer(playBottonViewTap)
 
+              let songLabelTap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(songLabelTap))
+              songView.addGestureRecognizer(songLabelTap)
+              
+              userNameLabel.text = "@\(safeData.userName)"
+              detailLabel.text = safeData.description
+              songNameLabel.text = "\(safeData.songName)    "
+              likeCountLabel.text = "\(safeData.likeCount)"
+              commentCountLabel.text = "\(safeData.commentCount)"
+
+              profileImg.image =  UIImage(named: "\(safeData.imgStr)")?.resize(targetSize: CGSize(width: 50, height: 50))
+
+              
+//              profileButton.setImage( UIImage(named: "\(safeData.imgStr)")?.resizeImage(targetSize: CGSize(width: 50, height: 50)), for: .normal)
+//
+//              profileButton.backgroundColor = .clear
+//              profileButton.layer.cornerRadius = 24
+//              profileButton.layer.borderWidth = 2
+//              profileButton.layer.borderColor = UIColor.white.cgColor
+//              profileButton.imageView?.layer.cornerRadius = profileButton.bounds.height / 2.0
+             
+
         }
      }
+    
+    @objc func songLabelTap(sender: UITapGestureRecognizer) {
+        print("Song label was taped")
+    }
+    
+    
     @objc func playerViewTap(sender: UITapGestureRecognizer) {
-        print("\(postModel?.vdoURL ?? "not found") : Video is Pause")
+        print("\(String(describing: postModel?.vdoURL)) : Video is Pause")
         changeState()
         self.showPlayBottonView.isHidden = false
 
         UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseInOut, animations: {
             //self.playIcon.center = newCenter
-            self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 0.65, y: 0.65) // Scale your image
+            self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1) // Scale your image
 
         }) { (success: Bool) in
                 //print("Done moving image")
             }
-
-        
     }
     
     @objc func playBottonViewTap(sender: UITapGestureRecognizer) {
-        print("\(postModel?.vdoURL ?? "not found") : Video is Playing")
+        print("\(String(describing: postModel?.vdoURL)) : Video is Playing")
         showPlayBottonView.isHidden = true
-        self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1)
+        self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 2, y: 2)
         changeState()
         
     }
@@ -162,20 +201,28 @@ extension UIImage {
         return image
     }
     
-    func resizeImage(targetSize: CGSize) -> UIImage {
-        let size = self.size
-        let widthRatio  = targetSize.width  / size.width
-        let heightRatio = targetSize.height / size.height
-        let newSize = widthRatio > heightRatio ?  CGSize(width: size.width * heightRatio, height: size.height * heightRatio) : CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
-        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+//    func resizeImage(targetSize: CGSize) -> UIImage {
+//        let size = self.size
+//        let widthRatio  = targetSize.width  / size.width
+//        let heightRatio = targetSize.height / size.height
+//        let newSize = widthRatio > heightRatio ?  CGSize(width: size.width * heightRatio, height: size.height * heightRatio) : CGSize(width: size.width * widthRatio,  height: size.height * widthRatio)
+//        let rect = CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
+//
+//        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+//        self.draw(in: rect)
+//        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//
+//        return newImage!
+//      }
+    
+    
+    func resize(targetSize: CGSize) -> UIImage {
+           return UIGraphicsImageRenderer(size:targetSize).image { _ in
+               self.draw(in: CGRect(origin: .zero, size: targetSize))
+           }
+       }
 
-        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
-        self.draw(in: rect)
-        let newImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        return newImage!
-      }
 }
 
 

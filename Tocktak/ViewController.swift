@@ -186,7 +186,7 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
         cell.layoutSubviews()
 
         cell.songNameLabel.restartLabel()
-        cell.playVideo()
+        cell.buildCell()
         if (!firstIsPlayed) {
             firstIsPlayed = true
             cell.play()
