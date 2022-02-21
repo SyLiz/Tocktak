@@ -26,6 +26,7 @@ class MainViewCell: UICollectionViewCell {
     @IBOutlet weak var playerView: UIView!
     @IBOutlet weak var likeCountLabel: UILabel!
     @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var musicRotate: UIView!
     var player : AVPlayer?
     var playerViewController = AVPlayerViewController()
     var postModel : PostModel?
@@ -43,6 +44,19 @@ class MainViewCell: UICollectionViewCell {
         profileImg.layer.borderWidth = 1
         profileImg.layer.borderColor = UIColor.white.cgColor
         profileImg?.layer.cornerRadius = (profileImg.bounds.height) / 2
+        
+        //musicRotate.startRotating(duration: 6, clockwise: true)
+    }
+    
+    private func rotateImageView() {
+        UIView.animate(withDuration: 3, delay: 0, options: .curveLinear, animations: {
+            self.musicRotate.transform = self.musicRotate.transform.rotated(by: .pi / 2)
+
+        }) { (finished) in
+            if finished {
+                self.rotateImageView()
+            }
+        }
     }
     
      func buildCell() {
@@ -85,8 +99,6 @@ class MainViewCell: UICollectionViewCell {
               likeCountLabel.text = "\(safeData.likeCount)"
               commentCountLabel.text = "\(safeData.commentCount)"
               profileImg.image =  UIImage(named: "\(safeData.imgStr)")?.resize(targetSize: CGSize(width: 50, height: 50))
-
-              
         }
      }
     
@@ -110,6 +122,7 @@ class MainViewCell: UICollectionViewCell {
         print("\(String(describing: postModel?.vdoURL)) : Video is Pause")
         changeState()
         self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 2, y: 2)
+        
         UIView.animate(withDuration: 0.15, delay: 0, options: .curveEaseInOut, animations: {
             //self.playIcon.center = newCenter
             self.showPlayBottonView.transform = CGAffineTransform.identity.scaledBy(x: 1, y: 1) // Scale your image
@@ -138,9 +151,11 @@ class MainViewCell: UICollectionViewCell {
             // player is playing
             player?.pause()
             songNameLabel.pauseLabel()
+            //musicRotate.stopRotating()
         } else {
             player?.play()
             songNameLabel.unpauseLabel()
+            //musicRotate.startRotating(duration: 6, clockwise: true)
         }
     }
     
@@ -228,4 +243,48 @@ extension UIImage {
 
 }
 
+extension UIView {
 
+        /**
+         Will rotate `self` for ever.
+
+         - Parameter duration: The duration in seconds of a complete rotation (360º).
+         - Parameter clockwise: If false, will rotate counter-clockwise.
+         */
+    func startRotating(duration: Double, clockwise: Bool) {
+            let kAnimationKey = "rotation"
+            var currentState = CGFloat(0)
+
+            // Get current state
+            if let presentationLayer = layer.presentation(), let zValue = presentationLayer.value(forKeyPath: "transform.rotation.z"){
+                currentState = CGFloat((zValue as AnyObject).floatValue)
+            }
+
+            if self.layer.animation(forKey: kAnimationKey) == nil {
+                let animate = CABasicAnimation(keyPath: "transform.rotation")
+                animate.duration = duration
+                animate.repeatCount = Float.infinity
+                animate.fromValue = currentState //Should the value be nil, will start from 0 a.k.a. "the beginning".
+                animate.byValue = clockwise ? Float(.pi * 2.0) : -Float(.pi * 2.0)
+                self.layer.add(animate, forKey: kAnimationKey)
+            }
+        }
+
+        /// Will stop a `startRotating(duration: _, clockwise: _)` instance.
+        func stopRotating() {
+            let kAnimationKey = "rotation"
+            var currentState = CGFloat(0)
+
+            // Get current state
+            if let presentationLayer = layer.presentation(), let zValue = presentationLayer.value(forKeyPath: "transform.rotation.z"){
+                currentState = CGFloat((zValue as AnyObject).floatValue)
+            }
+
+            if self.layer.animation(forKey: kAnimationKey) != nil {
+                self.layer.removeAnimation(forKey: kAnimationKey)
+            }
+
+            // Leave self as it was when stopped.
+            layer.transform = CATransform3DMakeRotation(currentState, 0, 0, 1)
+        }
+}

@@ -21,10 +21,20 @@ class ViewController: UIViewController, NavigateCallHandler {
         buildNavigationBar()
         buildSegment()
         
+        buildTempFollowView()
+        
         mainCollectionView.register(UINib(nibName: "MainViewCell", bundle: nil), forCellWithReuseIdentifier: "cell")
         mainCollectionView.delegate = self
         mainCollectionView.dataSource = self
         mainCollectionView?.contentInsetAdjustmentBehavior = .never
+        
+
+//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
+//        mainCollectionView.addGestureRecognizer(tap)
+        //UIApplication.shared.statusBarStyle = .darkContent
+    }
+    
+    func buildTempFollowView(){
         
         customView.frame = CGRect.init(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
         customView.backgroundColor = UIColor.brown
@@ -48,10 +58,6 @@ class ViewController: UIViewController, NavigateCallHandler {
         let yConstraint = NSLayoutConstraint(item: myLabel, attribute: .centerY, relatedBy: .equal, toItem: customView, attribute: .centerY, multiplier: 1, constant: 0)
 
         NSLayoutConstraint.activate([widthConstraint, heightConstraint, xConstraint, yConstraint])
-
-//        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
-//        mainCollectionView.addGestureRecognizer(tap)
-        //UIApplication.shared.statusBarStyle = .darkContent
     }
     
     func callNavigater(withIdentifier: String , model: Any?) {
@@ -110,9 +116,11 @@ class ViewController: UIViewController, NavigateCallHandler {
             case 0:
                 mainCollectionView.isHidden = true
                 customView.isHidden = false
+                changeState(isPause: true)
             case 1:
                 mainCollectionView.isHidden = false
                 customView.isHidden = true
+                changeState(isPause: false)
             default:
                 break
             }
@@ -167,7 +175,6 @@ class ViewController: UIViewController, NavigateCallHandler {
         self.navigationController!.navigationBar.topItem?.leftBarButtonItem = camera
         
         changeState(isPause: false)
-
     }
     
     
@@ -183,14 +190,13 @@ class ViewController: UIViewController, NavigateCallHandler {
         guard let currentCell = mainCollectionView.cellForItem(at: indexPath) as? MainViewCell else { return }
         
         if (isPause) {
-            currentCell.player?.pause()
+            currentCell.pause()
             currentCell.songNameLabel.pauseLabel()
         }
         else {
             if (currentCell.showPlayBottonView.isHidden) {
                 currentCell.player?.play()
                 currentCell.songNameLabel.unpauseLabel()
-
             }
         }
     }
@@ -258,7 +264,6 @@ extension ViewController: UICollectionViewDelegate,UICollectionViewDataSource,UI
                 playCell.play(rePlay: true)
                 playCell.songNameLabel.restartLabel()
                 playCell.songNameLabel.unpauseLabel()
-
             }
             
             mainCollectionView.visibleCells.forEach { cell in

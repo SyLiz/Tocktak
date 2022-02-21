@@ -194,6 +194,20 @@
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z7X-x7-A66">
+                        <rect key="frame" x="147" y="277.66666666666669" width="50" height="50"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="NeG-2g-t35"/>
+                            <constraint firstAttribute="width" constant="50" id="fOu-cl-mtq"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="NeG-2g-t35"/>
+                                <exclude reference="fOu-cl-mtq"/>
+                            </mask>
+                        </variation>
+                    </view>
                 </subviews>
             </view>
             <constraints>
@@ -205,9 +219,11 @@
                 <constraint firstItem="qJU-x8-NEk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LVO-mn-niG"/>
                 <constraint firstItem="duh-UY-wsD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="MwA-4P-o8z"/>
                 <constraint firstAttribute="bottom" secondItem="qJU-x8-NEk" secondAttribute="bottom" id="OzS-xk-JcA"/>
+                <constraint firstItem="Z7X-x7-A66" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="SKB-kg-y4b"/>
                 <constraint firstItem="p76-wb-9Ul" firstAttribute="leading" secondItem="duh-UY-wsD" secondAttribute="trailing" constant="8" id="Se8-pq-k4z"/>
                 <constraint firstAttribute="bottom" secondItem="1tL-Uq-bia" secondAttribute="bottom" constant="8" id="YWx-Iz-Qse"/>
                 <constraint firstItem="Itf-O6-Fye" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ZpH-Br-fv4"/>
+                <constraint firstItem="Z7X-x7-A66" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="cUE-n5-DH5"/>
                 <constraint firstAttribute="bottom" secondItem="duh-UY-wsD" secondAttribute="bottom" constant="8" id="eRx-hP-T0U"/>
                 <constraint firstItem="qJU-x8-NEk" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eg2-8O-Who"/>
                 <constraint firstAttribute="bottom" secondItem="p76-wb-9Ul" secondAttribute="bottom" constant="8" id="lMK-Dh-EcP"/>
@@ -219,11 +235,21 @@
                 <constraint firstItem="IkG-Zh-R2p" firstAttribute="top" secondItem="Itf-O6-Fye" secondAttribute="bottom" constant="8" id="xMU-Xh-B5u"/>
             </constraints>
             <size key="customSize" width="344" height="605"/>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="Z7X-x7-A66"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="SKB-kg-y4b"/>
+                    <exclude reference="cUE-n5-DH5"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="commentCountLabel" destination="Wmr-yv-H9K" id="mXZ-ES-ox9"/>
                 <outlet property="detailLabel" destination="IkG-Zh-R2p" id="ivg-WH-xmp"/>
                 <outlet property="heartButton" destination="sip-Nx-eLZ" id="pVh-0c-Xy4"/>
                 <outlet property="likeCountLabel" destination="lRq-bb-TyZ" id="W3z-cT-3hx"/>
+                <outlet property="musicRotate" destination="Z7X-x7-A66" id="haD-rZ-HyM"/>
                 <outlet property="playIcon" destination="rLl-nB-voG" id="MN0-dL-OSD"/>
                 <outlet property="playerView" destination="ehd-66-d5k" id="zWI-dF-z3z"/>
                 <outlet property="profileImg" destination="0RT-Gf-ecq" id="hNi-eM-cGm"/>
@@ -250,6 +276,9 @@
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
